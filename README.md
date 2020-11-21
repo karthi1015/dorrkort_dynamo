@@ -53,7 +53,14 @@ Dynamo can't apply a dictionary from an excel sheet and just match the key value
 Here is what I did:
 ![Dynamo Script](https://aws1.discourse-cdn.com/business6/uploads/dynamobim/original/3X/f/5/f53ad7040bbd17142d64fe8fb7dcf2c8cb4d1d09.png)
 
+## Preparations
+To have the script working you need to create parameters in your project. I used shared parameters that I loaded as project parameters and in this case most of them are instance-based. But how you handle your parameters is your thing, the important part is that this script doesn't create the parameters, you have to have them beforehand! If you google a bit you'll find tips how to batch create parameters.
+
 ## Walk through the script
+### Step 1 - loading Revit elements
 Let's start at the Revit side, loading all elements of the category "door":
+![Step 1](https://github.com/monsieurhannes/dorrkort_dynamo/blob/main/screenshots/step_1.png)
+That's quite basic, but worth mentioning when using Dynamo for the first time. You can use the script for any other category.
 
-
+### Step 2 - loading and processing the Excel sheet
+Excel import has it's own node, that's quite ease, then I use some Python scripts involved, it might be possible without python, but it's faster for me to write a python script. Let's follow the upper line first. It takes the headers of the Excel sheet, Those are the parameter names that get filled out later - it's important that there are no typos! Then I drop the key row as I only want to have the parameters that I want to add to the doors, the key stays unchanged.
