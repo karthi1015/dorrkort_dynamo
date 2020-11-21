@@ -58,9 +58,10 @@ To have the script working you need to create parameters in your project. I used
 
 ## Walk through the script
 ### Step 1 - loading Revit elements
-Let's start at the Revit side, loading all elements of the category "door":
 ![Step 1](https://github.com/monsieurhannes/dorrkort_dynamo/blob/main/screenshots/step_1.png)
 That's quite basic, but worth mentioning when using Dynamo for the first time. You can use the script for any other category.
 
 ### Step 2 - loading and processing the Excel sheet
+![Step 2](https://github.com/monsieurhannes/dorrkort_dynamo/blob/main/screenshots/step_2.png)
 Excel import has it's own node, that's quite ease, then I use some Python scripts involved, it might be possible without python, but it's faster for me to write a python script. Let's follow the upper line first. It takes the headers of the Excel sheet, Those are the parameter names that get filled out later - it's important that there are no typos! Then I drop the key row as I only want to have the parameters that I want to add to the doors, the key stays unchanged.
+
