@@ -59,10 +59,12 @@ To have the script working you need to create parameters in your project. I used
 ## Walk through the script
 ### Step 1 - loading Revit elements
 ![Step 1](screenshots/step_1.png)
+
 That's quite basic, but worth mentioning when using Dynamo for the first time. You can use the script for any other category.
 
 ### Step 2 - loading and processing the Excel sheet
 ![Step 2](screenshots/step_2.png)
+
 Excel import has it's own node, that's quite easy. Then I use two Python scripts, it might be possible without python, but it's faster for me to write a python script. Let's follow the upper line first. It takes the headers of the Excel sheet, Those are the parameter names that get filled out later - it's important that there are no typos! Then I drop the key row as I only want to have the parameters that I want to add to the doors, the key stays unchanged.
 
 In the very end you can see I change the names from ALL CAPS to title, so that the first letter of each word is in capitals. If you take better care of your parameters that's not necessary, but be aware that Dynamo is case sensitive!
@@ -89,7 +91,9 @@ And then I use the OOTB-node Dictionary.ValueAtKey to read all values for all th
 
 ### Step 3 and 4 - crucial!
 What now happens is the crucial part (which Dynamo should have as a node because it doesn't seem like a lot of nodes...).
+
 ![Step 3](screenshots/step_3.png)
+
 What Dynamo now does is basically calling each element as often as there are keys in the dictionary. On the upper line you see that it reads the lenght of the keys list and then it repeats all the elements from the door cateogory by the key amount. Lets say you have 30 keys and 200 elements that means that you created a list of 6000 elements that you want to write in the next step. Horrible to do that by hand!
 The list looks something like this if we use the example from above with 10 doors and 3 parameters to write:
 `[01,01,01,02,02,02,03,03,03,04,04,04,05,05,05...]`
