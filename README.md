@@ -1,7 +1,7 @@
 # Using an excel sheet as dictionary in Dynamo
 
 ## Where to start
-*Some of this text might not be interesting to everyone. If you're just looking for a solution to import Excel sheets as dictionaries into Dynamo you can jump ahead or download the dyn-file right away. But for Swedish professionals with the same problem or someone who loves to read, the rest gives you some context.*
+**Some of this text might not be interesting to everyone. If you're just looking for a solution to import Excel sheets as dictionaries into Dynamo you can jump ahead or download the dyn-file right away. But for Swedish professionals with the same problem or someone who loves to read, the rest gives you some context.**
 
 ## The "Dörrkort"-problem
 The office I'm working in is switching from a long legacy in in AutoCAD Architecture over to Revit. There are some test projects and I'm part in one of them. The plan is to create a smooth workflow that enables us to take advantage of the built in solutions but also exended functionality of Revit and BIM. 
