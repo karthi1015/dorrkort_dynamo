@@ -3,6 +3,9 @@
 ## Where to start
 **Some of this text might not be interesting to everyone. If you're just looking for a solution to import Excel sheets as dictionaries into Dynamo you can jump ahead or download the dyn-file right away. But for Swedish professionals with the same problem or someone who loves to read, the rest gives you some context.**
 
+## Dependencies
+Testet with Dynamo 2.x and Revit 2020. All nodes are OOTB!
+
 ## The "Dörrkort"-problem
 The office I'm working in is switching from a long legacy in in AutoCAD Architecture over to Revit. There are some test projects and I'm part in one of them. The plan is to create a smooth workflow that enables us to take advantage of the built in solutions but also exended functionality of Revit and BIM. 
 A very tidious job when building here in Sweden is the so called "Dörrkort". That's basically one door per drawing and you have all door information sorted in a standardized manor. The only good example I could find was in [this master thesis](http://www.diva-portal.se/smash/get/diva2:1221728/FULLTEXT01.pdf) on page 77. Our current workflow in AutoCAD demands a lot of manual checking and filling out text in the respective row. That's just how it was handled so far, there might be a better solution for AutoCAD as well, but my focus is now on Revit.
